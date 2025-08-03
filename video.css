@@ -94,6 +94,8 @@ body {
     width: 100%;
     flex-wrap: nowrap;
     scroll-snap-type: x proximity;
+    position: relative;
+    height: 430px;
 }
 
 .horizontal-row {

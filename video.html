@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Videos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="video.css">
     
 
 </head>
@@ -130,12 +130,15 @@
 
             <!-- microblading vertical -->
             <div class="gallery-item" style="--aspect-ratio: 4/5; min-width: 250px;" onclick="openVideo('https://www.youtube.com/embed/twq2b5zoFk4')">
-                <img src="fotos/micro.png" alt="Planta suculenta en maceta de cerámica blanca sobre fondo pastel minimalista">
+               <video src="holii.mp4" type="video/mp4">
+               </video>
                 <div class="play-icon">
                     <i class="fas fa-play"></i>
                 </div>
             </div>
         </div>
+
+        
     
     <div class="video-overlay" id="videoOverlay">
         <div class="video-container">
@@ -145,6 +148,8 @@
             <iframe id="videoFrame" allowfullscreen></iframe>
         </div>
     </div>
+
+    
     
     <script src="video.js"></script>
     
