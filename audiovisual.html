@@ -3,139 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Audiovisual</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Mis Proyectos Audiovisuales</title>
   <link rel="stylesheet" href="audiovisual.css" />
 </head>
-<body class="min-h-screen">
-  <div class="container mx-auto px-4 py-12">
-    <!-- Botón de regreso -->
-    <a href="index.html" class="back-btn inline-flex items-center gap-2 mb-8 transition-transform duration-300">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-      </svg>
-      <span>Volver al inicio</span>
-    </a>
-
-    <!-- Encabezado -->
-    <div class="text-center mb-16">
-      <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-4">
-        Portafolio Audiovisual
-      </h1>
-      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Explora mi colección de trabajos creativos. Cada proyecto cuenta una historia única.
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <button class="back-btn" onclick="window.location.href='index.html'">
+        ← Volver al inicio
+      </button>
+      <h1 class="title">Mis Proyectos Audiovisuales</h1>
+      <p class="subtitle">
+        Una colección de mis trabajos profesionales en producción audiovisual
       </p>
-    </div>
+    </header>
 
-    <!-- Carrusel de videos -->
-    <div class="relative">
-      <div class="portfolio-container flex overflow-x-auto gap-8 pb-8 scrollbar-hide">
-        <!-- Video 1 (YouTube) -->
-        <div class="portfolio-item px-4">
-          <div class="video-container bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
-            <div class="vertical-video mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube vertical video player" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Proyecto Destacado</h3>
-              <p class="text-gray-300">Un viaje visual a través de paisajes increíbles con narrativa impactante.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 2 (Local) -->
-        <div class="portfolio-item px-4">
-          <div class="video-container bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
-            <div class="vertical-video mx-auto">
-              <video class="w-full h-full" controls poster="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/96ebb45c-5559-42da-994c-d899f8f17722.png">
-                <source src="assets/videos/project2.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Documental Creativo</h3>
-              <p class="text-gray-300">Explorando técnicas innovadoras en producción audiovisual.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 3 (YouTube) -->
-        <div class="portfolio-item px-4">
-          <div class="video-container bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
-            <div class="aspect-w-16 aspect-h-9">
-              <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Corto Narrativo</h3>
-              <p class="text-gray-300">Una historia emocionante filmada con técnicas cinematográficas innovadoras.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video 4 (Local) -->
-        <div class="portfolio-item px-4">
-          <div class="video-container bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
-            <div class="aspect-w-16 aspect-h-9">
-              <video class="w-full h-64 md:h-96" controls poster="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d43e554a-9c76-492d-8db8-1cbf77c83a00.png">
-                <source src="assets/videos/project4.mp4" type="video/mp4" />
-              </video>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-semibold mb-2">Producción Musical</h3>
-              <p class="text-gray-300">Grabación en vivo con técnica multicámara y postproducción avanzada.</p>
-            </div>
-          </div>
+    <!-- Horizontal videos -->
+    <h2 class="section-title"></h2>
+    <div class="video-grid" id="horizontalVideos">
+      <!-- Video 1 -->
+      <div class="video-item" data-video-id="ik7Egw45uYU">
+        <img src="fotos/calmpasos.png" alt="Vista aérea de montañas nevadas" class="video-thumbnail" />
+        <div class="video-overlay">
+          <h3 class="video-title">Horizontes Perdidos</h3>
+          <span class="video-duration">24:35</span>
         </div>
       </div>
 
-      <!-- Flechas -->
-      <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full transform -translate-x-4 hover:bg-opacity-80 z-10 hidden md:block">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full transform translate-x-4 hover:bg-opacity-80 z-10 hidden md:block">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Indicadores -->
-    <div class="flex justify-center gap-2 mt-8">
-      <button class="w-3 h-3 rounded-full bg-purple-500"></button>
-      <button class="w-3 h-3 rounded-full bg-gray-600"></button>
-      <button class="w-3 h-3 rounded-full bg-gray-600"></button>
-      <button class="w-3 h-3 rounded-full bg-gray-600"></button>
-    </div>
-
-    <!-- Sección horizontal -->
-    <div class="mt-16">
-      <h2 class="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-500">
-        Proyectos Cinematográficos
-      </h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="video-container bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-cyan-500/30 transition-all duration-300">
-          <div class="aspect-w-16 aspect-h-9">
-            <iframe class="w-full h-64" src="https://www.youtube.com/embed/EXAMPLE1" title="Video horizontal" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Documental Horizontal</h3>
-            <p class="text-gray-300">Producción cinematográfica en formato panorámico</p>
-          </div>
+      <!-- Video 2 -->
+      <div class="video-item" data-video-id="FfDyCB9G6w4">
+        <img src="fotos/podcast.png" alt="Podcast elena de la fuente" class="video-thumbnail" />
+        <div class="video-overlay">
+          <h3 class="video-title">El Último Pescador</h3>
+          <span class="video-duration">42:18</span>
         </div>
+      </div>
 
-        <div class="video-container bg-gray-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-cyan-500/30 transition-all duration-300">
-          <div class="aspect-w-16 aspect-h-9">
-            <video class="w-full h-64" controls poster="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/956d3f92-fe4d-406a-a39d-c078f33da7ca.png">
-              <source src="assets/videos/horizontal1.mp4" type="video/mp4" />
+      <!-- Video 3 -->
+      <div class="video-item" data-video-id="lLEX_oAcLow">
+        <img src="fotos/alfombra.png" alt="tributo a pedro suarez vertiz" class="video-thumbnail" />
+        <div class="video-overlay">
+          <h3 class="video-title">Flujo Urbano</h3>
+          <span class="video-duration">15:42</span>
+        </div>
+      </div>
+
+      <!-- Video 4 -->
+      <div class="video-item" data-video-id="HDjEjxjEqaY">
+        <img src="fotos/Calm.png" alt="tributo a pedro suarez vertiz" class="video-thumbnail" />
+        <div class="video-overlay">
+          <h3 class="video-title">Flujo Urbano</h3>
+          <span class="video-duration">15:42</span>
+        </div>
+      </div>
+      <!-- Video 5 -->
+      <div class="video-item" data-video-id="LpLAupM2eoQ">
+        <img src="fotos/selena.png" alt="tributo a pedro suarez vertiz" class="video-thumbnail" />
+        <div class="video-overlay">
+          <h3 class="video-title">Flujo Urbano</h3>
+          <span class="video-duration">15:42</span>
+        </div>
+      </div>
+      <!-- Video 6 -->
+      <div class="video-item" data-video-id="c1T-QAsa5PI">
+        <img src="fotos/bienpublico.png" alt="tributo a pedro suarez vertiz" class="video-thumbnail" />
+        <div class="video-overlay">
+          <h3 class="video-title">Flujo Urbano</h3>
+          <span class="video-duration">15:42</span>
+        </div>
+      </div>
+
+    </div>
+     
+    <!-- Fullscreen player -->
+    <div class="video-player" id="videoPlayer">
+      <div class="player-container">
+        <button class="close-btn" id="closePlayer">×</button>
+        <iframe class="player-iframe" id="playerIframe" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Vertical videos -->
+    <h2 class="section-title">Reels y Contenido Vertical</h2>
+    <div class="reels-container">
+      <div class="reels-scroll" id="verticalVideos">
+
+        <!-- Reel 1 - video local: podcast -->
+        <div class="reel-item">
+          <div class="reel-player-container">
+            <video class="reel-iframe" muted loop playsinline>
+              <source src="videos/podcast.mp4" type="video/mp4" />
+              Tu navegador no admite el video.
             </video>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Evento en Largo</h3>
-            <p class="text-gray-300">Cobertura completa de evento en formato widescreen</p>
+            <button class="play-btn">▶️</button>
           </div>
         </div>
+
+        <!-- Reel 2 - video local: podcast -->
+        <div class="reel-item">
+          <div class="reel-player-container">
+            <video class="reel-iframe" muted loop playsinline>
+              <source src="videos/casa.mp4" type="video/mp4" />
+              Tu navegador no admite el video.
+            </video>
+            <button class="play-btn">▶️</button>
+          </div>
+        </div>
+
+        <!-- Reel 3 - video local: micro -->
+        <div class="reel-item">
+          <div class="reel-player-container">
+            <video class="reel-iframe" muted loop playsinline>
+              <source src="videos/micro.mp4" type="video/mp4"/>
+            </video>
+            <button class="play-btn">▶️</button>
+          </div>
+        </div>
+        
+        <!-- Reel 4 - video local: micro -->
+        <div class="reel-item">
+          <div class="reel-player-container">
+            <video class="reel-iframe" muted loop playsinline>
+              <source src="videos/tallerdevoz.mp4" type="video/mp4"/>
+            </video>
+            <button class="play-btn">▶️</button>
+          </div>
+        </div>
+
+        <!-- Reel 5 - video local: micro -->
+        <div class="reel-item">
+          <div class="reel-player-container">
+            <video class="reel-iframe" muted loop playsinline>
+              <source src="videos/sofia.mp4" type="video/mp4"/>
+            </video>
+            <button class="play-btn">▶️</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
       </div>
     </div>
   </div>
